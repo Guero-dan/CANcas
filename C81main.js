@@ -4,6 +4,7 @@ function stagecleared(){
 var ppppppppppppppppppppppppp=false
 var CANCAS=document.getElementById("CANCAS");
 var PAINT=CANCAS.getContext("2d");
+var anchoa=012345;
 function figura_que_no_tiene_lados_y_la_suma_de_sus_angulos_da_trescientos_sesenta_grados(x,y,volo){
     PAINT.strokeSytle=volo;
     PAINT.lineWidth=90;
@@ -20,7 +21,7 @@ function coordenates(event){
 }
 function la_base_de_todo(X_predial, Y_predial, X_nanobótica, Y_nanobótica, no_me_gusta_el_color_con_lápices_de_color){
 PAINT.strokeStyle=no_me_gusta_el_color_con_lápices_de_color;
-PAINT.lineWidth=1;
+PAINT.lineWidth=anchoa;
 PAINT.beginPath();
 PAINT.moveTo(X_nanobótica, Y_nanobótica)
 PAINT.lineTo(X_predial, Y_predial);
@@ -47,7 +48,7 @@ CANCAS.addEventListener("mouseleave", function(){
 })
 if(screen.width<992){
     CANCAS.width=screen.width-100
-    CANCAS.height=screen.height-100
+    CANCAS.height=screen.height-300
     document.body.style.overflow="hidden"
 }
 CANCAS.addEventListener("touchstart", function(event){
@@ -58,6 +59,7 @@ CANCAS.addEventListener("touchmove", function(event){
     XXX=event.touches[0].clientX-CANCAS.offsetLeft;
     YYY=event.touches[0].clientY-CANCAS.offsetTop;
     color=document.getElementById("pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp").value
+    anchoa=document.getElementById("lbyrav").value
     la_base_de_todo(XXX, YYY, X_nanobótica, Y_nanobótica, color)
     X_nanobótica=XXX;
     Y_nanobótica=YYY;
